@@ -11,24 +11,29 @@ namespace Q6
 	{
 		static void Main(string[] args)
 		{
-			DateTime today = DateTime.Today;
-			int days = Convert.ToInt32(today.ToString("dd"));
+			//DateTime today = DateTime.Today;
+			//int days = Convert.ToInt32(today.ToString("dd"));
+
+			int days = DateTime.Today.Day;
 			
 			const int early = 11;
 			const int mid = 21;
+
+			string massage = string.Empty;
 			
 			if (days < early)
 			{
-				Console.WriteLine("今日為此月上旬");
+				massage = "上旬";
 			}
 			else if (days < mid)
 			{
-				Console.WriteLine("今日為此月中旬");
+				massage = "中旬";
 			}
 			else
 			{
-				Console.WriteLine("今日為此月下旬");
+				massage = "下旬";
 			}
+			Console.WriteLine($"今日為此月的{massage}");
 
 		}
 	}

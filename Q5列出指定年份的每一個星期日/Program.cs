@@ -14,6 +14,7 @@ namespace Q5列出指定年份的每一個星期日
 			string inputYears = Console.ReadLine();
 			DateTime firstDay = Convert.ToDateTime($"{inputYears}/01/01");
 			DateTime lastDay = Convert.ToDateTime($"{inputYears}/12/31");
+			
 			DayOfWeek dayOfWeek = firstDay.DayOfWeek;
 			int day = (int)dayOfWeek;
 			const int daysOfaWeek = 7;
